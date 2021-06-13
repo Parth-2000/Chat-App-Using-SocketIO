@@ -16,7 +16,7 @@ const Chat = ({ location }) => {
 	const [message, setMessage] = useState("");
 	const [messages, setMessages] = useState([]);
 	const [users, setUsers] = useState("");
-	const END_POINT = "YOUR SERVER URL";
+	const END_POINT = "https://socketio-chat-app-react.herokuapp.com";
 	const history = useHistory();
 
 	useEffect(() => {
@@ -42,7 +42,7 @@ const Chat = ({ location }) => {
 			socket.emit("disconnect");
 			socket.off();
 		};
-	}, [END_POINT, location.search]);
+	}, [END_POINT, location.search, history]);
 
 	useEffect(() => {
 		socket.on("message", message => {

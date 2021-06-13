@@ -18,7 +18,9 @@ const Join = () => {
 						placeholder="Eg. john"
 						onChange={e => setName(e.target.value)}
 					/>
-					<label htmlFor="floatingInput">Name</label>
+					<label htmlFor="floatingInput">
+						<sup>*</sup>Name
+					</label>
 				</div>
 				<div className="form-floating">
 					<input
@@ -28,7 +30,9 @@ const Join = () => {
 						placeholder="Room Name"
 						onChange={e => setRoom(e.target.value)}
 					/>
-					<label htmlFor="floatingPassword">Room</label>
+					<label htmlFor="floatingPassword">
+						<sup>*</sup>Room
+					</label>
 				</div>
 				<div className="join-btn-container">
 					<Link
